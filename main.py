@@ -1,5 +1,5 @@
 import time
-import epd2in13_V2
+import epd2in13g
 
 from config import STATION, PLATFORMS, REFRESH_FAST, REFRESH_NORMAL
 from api import get_departures
@@ -17,7 +17,7 @@ def dynamic_sleep(trains):
 def main():
     load_crs()
 
-    epd = epd2in13_V2.EPD()
+    epd = epd2in13g.EPD()
     epd.init()
     epd.Clear(0xFF)
 
